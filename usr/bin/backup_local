@@ -1,0 +1,22 @@
+#!/bin/bash
+DAY=$(date +%Y-%m-%d--%H:%M:%S--%A)
+SOURCE=/Users/hubert
+# SOURCE2=/Users/hubert/Documents
+TARGETBASE=hubert@raspberrypi:/home/hubert/backup
+TARGET=$TARGETBASE/current
+BACKUPDIR=../$DAY/
+EXCLUDED=~/.usr/var/backup/excluded
+
+terminal-notifier -message "Début de la sauvegarde" -title "Backup"
+
+rsync -axzHsv --chmod=u=rwX,g-rwX,o-rwx --exclude-from=$EXCLUDED --inplace --delete --backup --backup-dir=$BACKUPDIR $SOURCE $TARGET 1> ~/Library/Logs/backup_rsync.log 2> ~/Library/Logs/backup_rsync_errors.log
+ret=$?
+
+if [ $ret -eq 0 ]; then
+	terminal-notifier -message "La sauvegarde a réussi" -title "Backup"
+elif [ $ret -eq 23 ]; then
+	terminal-notifier -message "La sauvegarde a partiellement échoué" -title "Backup"
+else
+	terminal-notifier -message "La sauvegarde a échoué" -title "Backup"
+fi
+

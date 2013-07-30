@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+sudo echo "======> MacPorts"
+echo " "
+sudo port selfupdate
+echo " "
+echo "======> Opam"
+echo " "
+opam update; 
+echo " "
+echo "======> Outdated MacPorts"
+echo " "
+port outdated

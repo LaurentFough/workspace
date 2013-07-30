@@ -1,0 +1,115 @@
+% !TEX TS-program = latex
+% !TEX encoding = Windows Latin 1
+\documentclass[11pt]{article}
+
+%\usepackage[backend=bibtex, citestyle=alphabetic, bibstyle=alphabetic, language=french]{biblatex}
+%\addbibresource{../references.bib}
+
+%Fourier for math | Utopia (scaled) for rm | Helvetica for ss | Latin Modern for tt
+\usepackage[upright]{fourier} % math & rm
+\usepackage[scaled=0.875]{helvet} % ss
+\renewcommand{\ttdefault}{lmtt} %tt
+
+% Latin Modern (similar to CM with more characters)
+%\usepackage{lmodern} % math, rm, ss, tt
+
+\usepackage{pdfsync}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{amsmath}  % Maths
+\usepackage{stmaryrd} % symboles bizarres (informatique)
+\usepackage{listings} % Listings
+\usepackage{moreverb} % Listings aussi
+\usepackage{amsfonts,amssymb,verbatim} % ?
+\usepackage{amsthm}   % Theorèmes
+\usepackage{mathrsfs} % ?
+\usepackage{graphicx} % même origine que color mais pour faire des graphs
+\usepackage{pstricks,pst-plot,pstricks-add,pst-math,pst-node} % dessins
+\usepackage[utf8]{inputenc} % encodage
+\usepackage{color}		% couleurs
+\usepackage[T1]{fontenc} % encodage police pdf
+\usepackage{lastpage} % permet de se référer à la dernière page d'un document
+\usepackage[francais]{babel}
+\usepackage{fancyhdr}
+\usepackage{calc} 		% arithmetique infixe des compteurs
+\newcommand{\noind}{\noindent}
+\usepackage[bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\definecolor{dullmagenta}{rgb}{0.4,0,0.4}   % #660066
+\definecolor{darkblue}{rgb}{0,0,0.4}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=dullmagenta,urlcolor=darkblue} % coloured links
+%\hypersetup{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
+
+\newcommand{\imp}[1]{\textit{\textbf{#1}} }
+
+ 
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\texttt{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+
+\newcommand{\ssi}{si et seulement si }
+\newcommand{\re}{\mbox{Re} }
+\newcommand{\im}{\mbox{Im} }
+\newcommand{\vect}{\mbox{vect} }
+\newcommand{\rg}{\mbox{rg} }
+\newcommand{\Ker}{\mbox{Ker} }
+\newcommand{\tr}{\mbox{tr} }
+\newcommand{\Sp}{\mbox{S}_{p} }
+\newcommand{\Quad}{\mbox{Quad} }
+\newcommand{\grad}{\overrightarrow{\mbox{grad}} }
+\newcommand{\rot}{\overrightarrow{\mbox{rot}} }
+
+\newcommand{\noeud}{n\oe ud }
+\newcommand{\noeuds}{n\oe uds }
+\newcommand{\algo}{algorithme }
+\newcommand{\algos}{algorithmes }
+
+\newcommand{\IN}{\textit{in} }
+
+\definecolor{gris}{rgb}{0.9,0.9,0.9} 
+\definecolor{bleuclair}{rgb}{0.7,0.7,1}
+\lstset{ basicstyle={\ttfamily \small}, language=c, keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines = true, showstringspaces=false} 
+
+\newcommand{\afaire}{\begin{center}
+\vspace{1cm}
+{\Large \# \textit{IMAGE}}
+\vspace{1cm}
+\end{center}}
+
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\norme}[1]{\left\Vert #1 \right\Vert}
+%\newcommand{\tribarre}[1]{\left\Vert \! \! \: \left| #1 \right| \! \!  \: \right\Vert}
+%\newcommand{\dint}[1]{\displaystyle{\int} \! \!  \! \! \displaystyle{\int_{ #1}} }
+%\newcommand{\tint}[1]{\displaystyle{\int} \! \!  \! \! \displaystyle{\int} \! \!  \! \! \displaystyle{\int_{#1}} }
+\newcommand{\tribarre}[1]{\left\VERT #1 \right\VERT} % avec le pakage fourier
+\newcommand{\dint}[1]{\displaystyle{\iint_{#1}}} % avec le pakage fourier
+\newcommand{\tint}[1]{\displaystyle{\iiint_{#1}}} % avec le pakage fourier
+\newcommand{\scal}[1]{\left\langle #1 \right\rangle}
+\newcommand{\ent}[1]{\left\llbracket#1\right\rrbracket}
+\newcommand{\somme}[2]{\displaystyle{\sum_{#1}^{#2}}}
+\newcommand{\integrale}[2]{\displaystyle{\int_{#1}^{#2}}}
+\newcommand{\e}{\mathrm{e}}
+\def\jfrac#1#2{\raisebox{2pt}{$#1$}/\raisebox{-2pt}{$#2$}}   %%%%  jolie fraction
+
+
+\pagestyle{fancy}
+%\lhead{ } 
+  %\chead{ }
+% \rhead{ } 
+%\fancyfoot{\cfoot{\thepage}}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{{\color{gray}%
+\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}}
+
+\theoremstyle{plain} 
+\newtheorem{theo}{Th\'eor\`eme } 
+\newtheorem{rappel}{Rappel du th\'eor\`eme }
+\newtheorem{lemme}{Lemme }
+
+\theoremstyle{remark}
+\newtheorem{remarque}[theo]{Remarque }
+
+\theoremstyle{definition}
+\newtheorem{définition}[theo]{D\'efinition }

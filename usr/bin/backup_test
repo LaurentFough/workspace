@@ -1,0 +1,41 @@
+#!/bin/bash
+DAY=$(date +%Y-%m-%d:%H-%M-%S_%A)
+SOURCE=/Users/hubert/Desktop
+SOURCE2=/Users/hubert/Documents
+TARGETBASE=/Volumes/Echange/backup
+TARGET=$TARGETBASE/current
+BACKUPDIR=../$DAY/
+
+
+# if [ ! -e $TARGETBASE ] ; then
+# 	mkdir $TARGETBASE
+# fi
+# 
+# if [ -e $TARGETBASE/$DAY ] ; then
+# 	terminal-notifier -title "Sauvegarde" -message "Le dossier incrémental est déjà présent"
+# 	exit
+# fi
+
+
+terminal-notifier -message "Début de la sauvegarde" -title "Backup"
+
+rsync -axzHsv --chmod=u=rwX,g-rwX,o-rwx --exclude=".DS_Store" --inplace --delete --backup --backup-dir=$BACKUPDIR $SOURCE $SOURCE2 $TARGET 1> ~/Library/Logs/backup_rsync.log 2> ~/Library/Logs/backup_rsync_errors.log
+ret=$?
+
+if [ $ret -eq 0 ]; then
+	terminal-notifier -message "La sauvegarde a réussi" -title "Backup"
+elif [ $ret -eq 23 ]; then
+	terminal-notifier -message "La sauvegarde a partiellement échoué" -title "Backup"
+else
+	terminal-notifier -message "La sauvegarde a échoué" -title "Backup"
+fi
+
+# if [ -e /home/aurelien/logs ]; then
+# 	cp /tmp/backupInc.err /home/aurelien/logs/backupInc_$DAY.err
+# 	cp /tmp/backupInc.out /home/aurelien/logs/backupInc_$DAY.out
+# else
+# 	notify-send '/home/aurelien/logs not found.'
+# fi
+
+# cat /tmp/backupInc.out | logger
+# cat /tmp/backupInc.err | logger

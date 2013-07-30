@@ -1,0 +1,6 @@
+#!/bin/bash
+
+locdir=$(pwd)
+file="$locdir/$1"
+
+open $file

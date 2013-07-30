@@ -1,0 +1,8 @@
+#!/bin/sh
+
+locdir=$(pwd)
+file="$locdir/$1"
+#echo $file
+heure=$(date "+%H_%M_%S")
+chemin="$HOME/.Trash/$1_$heure"
+mv $file $chemin

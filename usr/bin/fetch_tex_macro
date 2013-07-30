@@ -1,0 +1,9 @@
+#!/bin/sh
+
+locdir=$(pwd)
+copymacro="$locdir/macro.tex"
+copymake="$locdir/Makefile"
+copybeamer="$locdir/macro_beamer.tex"
+cp ~/.usr/share/tex/macro.tex $copymacro
+cp ~/.usr/share/tex/Makefile_latex $copymake
+cp ~/.usr/share/tex/macro_beamer.tex $copybeamer
