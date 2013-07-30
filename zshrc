@@ -1,23 +1,6 @@
-# Tranquil
-export PATH=/usr/local/tranquil/bin:$PATH
-
-# MacPorts Installer
-export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
-
-# Finished adapting your PATH environment variable for use with MacPorts.
-
 # Scripts personnels
 export PATH=${PATH}:${HOME}/.usr/bin
 
-# iML
-# export PATH=${PATH}:${HOME}/Dropbox/projects/ml-overloading/src
-
-eval `opam config env`
-
-
-# cabal
-# export PATH=${HOME}/.cabal/bin:${PATH}
-export PATH="$HOME/Library/Haskell/bin:$PATH"
 # --------------------------------- VIMPAGER ----------------------------------
 
 
