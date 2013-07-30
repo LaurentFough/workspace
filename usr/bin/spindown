@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#DISK=/dev/disk/by-id/scsi-SLaCie_d2_quadra
+LIGNE=$(cat /proc/mounts | grep /home/hubert/data | cut -f 1 -d " ")
+PARTITION=${LIGNE:5:4}
+DISK=${LIGNE:0:8}
+echo $DISK
+OLDState=$(cat /proc/diskstats | grep $PARTITION)
+sleep 10
+NEWstate=$(cat /proc/diskstats | grep $PARTITION)
+
+# if no changes, power down
+if [ "$OLDState" = "$NEWstate" ]; then
+	hdparm -y $DISK
+	echo dodo
+fi
