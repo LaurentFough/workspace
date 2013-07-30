@@ -1,7 +1,7 @@
 #!/bin/bash
 
 locdir=$(pwd)
-listelements=$locdir/*
+listelements=$locdir/* #ne prends que les fichiers visibles
 
 suffixe="$locdir/"
 
