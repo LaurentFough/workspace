@@ -1,0 +1,6 @@
+#!/bin/bash
+
+LIGNE=$(cat /proc/mounts | grep $1 | cut -f 1 -d " ")
+PARTITION=${LIGNE:5:4}
+DISK=${LIGNE:0:8}
+echo $DISK
