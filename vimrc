@@ -88,7 +88,7 @@ set hlsearch                    " highlight the last used search pattern
 set incsearch                   " do incremental searching
 set listchars=tab:>.,eol:\$     " strings to use in 'list' mode
 set mouse=a                     " enable the use of the mouse
-set nowrap                      " do not wrap lines
+" set nowrap                      " do not wrap lines
 set popt=left:8pc,right:3pc     " print options
 set ruler                       " show the cursor position all the time
 set shiftwidth=2                " number of spaces to use for each step of indent
