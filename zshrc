@@ -17,7 +17,7 @@ eval `opam config env`
 
 # cabal
 # export PATH=${HOME}/.cabal/bin:${PATH}
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+# export PATH="$HOME/Library/Haskell/bin:$PATH"
 # --------------------------------- VIMPAGER ----------------------------------
 
 
