@@ -1,0 +1,3 @@
+#!/bin/bash
+
+duplicity --verbosity info --exclude-globbing-filelist=.usr/var/backup/excluded_duplicity /Users/hubert ssh://hubert@evry/intenso/lulu/mbp6

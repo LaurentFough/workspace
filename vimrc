@@ -1,3 +1,31 @@
+"===============================================================================
+"         FILE:  .vimrc
+"  DESCRIPTION:  suggestion for a personal configuration file ~/.vimrc
+"       AUTHOR:  Dr.-Ing. Fritz Mehner
+"       CUSTOM:  Hubert Godfroy
+"      CREATED:  04.04.2009
+"     REVISION:  $Id: customization.vimrc,v 1.6 2009/10/03 12:24:30 mehner Exp $
+"===============================================================================
+"
+"===============================================================================
+" GENERAL SETTINGS
+"===============================================================================
+
+set nocompatible
+
+"-------------------------------------------------------------------------------
+" Enable file type detection. Use the default filetype settings.
+" Also load indent files, to automatically do language-dependent indenting.
+"-------------------------------------------------------------------------------
+filetype  plugin on
+filetype  indent on
+syntax    on
+
+
+"-------------------------------------------------------------------------------
+" Mes options
+"-------------------------------------------------------------------------------
+
 colorscheme mine
 set background=dark
 set number
@@ -9,6 +37,7 @@ map <leader>s :split<cr><C-w>j
 map <leader>c :so session.vim<cr>
 map <leader>w :w<cr>
 map <leader>q :q<cr>
+" map <leader>b :make<cr>
 
 map <D-d> :vsplit<cr><C-w>l
 map <D-D> :split<cr><C-w>j
@@ -17,35 +46,9 @@ imap <D-D> <esc>:split<cr><C-w>j
 map <C-space> <C-n>
 
 map gt <C-]>
-"===================================================================================
-"         FILE:  .vimrc
-"  DESCRIPTION:  suggestion for a personal configuration file ~/.vimrc
-"       AUTHOR:  Dr.-Ing. Fritz Mehner
-"      CREATED:  04.04.2009
-"     REVISION:  $Id: customization.vimrc,v 1.6 2009/10/03 12:24:30 mehner Exp $
-"===================================================================================
-"
-"===================================================================================
-" GENERAL SETTINGS
-"===================================================================================
 
-"-------------------------------------------------------------------------------
-" Use Vim settings, rather then Vi settings.
-" This must be first, because it changes other options as a side effect.
-"-------------------------------------------------------------------------------
-set nocompatible
-"
-"-------------------------------------------------------------------------------
-" Enable file type detection. Use the default filetype settings.
-" Also load indent files, to automatically do language-dependent indenting.
-"-------------------------------------------------------------------------------
-filetype  plugin on
-filetype  indent on
-"
-"-------------------------------------------------------------------------------
-" Switch syntax highlighting on.
-"-------------------------------------------------------------------------------
-syntax    on
+
+
 
 let java_highlight_all=1
 let java_highlight_functions="style"
@@ -94,14 +97,15 @@ set ruler                       " show the cursor position all the time
 set shiftwidth=2                " number of spaces to use for each step of indent
 set showcmd                     " display incomplete commands
 set smartindent                 " smart autoindenting when starting a new line
+set expandtab                   " indent with space instead of tabulation
 set tabstop=2                   " number of spaces that a <Tab> counts for
 set noeb vb t_vb=               " la fin de ces putains de beeps !!!
 set wildignore=*.bak,*.o,*.e,*~ " wildmenu: ignore these extensions
 set wildmenu                    " command-line completion in an enhanced mode
 "
-"===================================================================================
+"===============================================================================
 " BUFFERS, WINDOWS
-"===================================================================================
+"===============================================================================
 "
 "-------------------------------------------------------------------------------
 " The current directory is the directory of the file in the current window.
@@ -218,9 +222,9 @@ if has("autocmd")
   autocmd BufEnter * :lchdir %:p:h
 endif " has("autocmd")
 "
-"===================================================================================
+"===============================================================================
 " VARIOUS PLUGIN CONFIGURATIONS
-"===================================================================================
+"===============================================================================
 "
 "-------------------------------------------------------------------------------
 " c.vim
@@ -281,19 +285,21 @@ if has("autocmd")
 	autocmd FileType tex setlocal textwidth=80
 endif
 
-" --------------------------------- MERLIN ------------------------------------
+" -------------------------------- MERLIN ---------------------------------------
 
-set rtp+=/Users/hubert/.opam/4.00.1/share/ocamlmerlin/vim
-set rtp+=/Users/hubert/.opam/4.00.1/share/ocamlmerlin/vimbufsync
+set rtp+=/Users/hubert/.opam/4.01.0/share/ocamlmerlin/vim
+set rtp+=/Users/hubert/.opam/4.01.0/share/ocamlmerlin/vimbufsync
+let g:syntastic_omlet_checkers = ['merlin']
 
-
-" ---------------------------------- LATEX ------------------------------------
+" --------------------------------- LATEX --------------------------------------
 
 let g:tex_flavor='latex'
 
-" ---------------------------------- CRONTAB ----------------------------------
+" -------------------------------- CRONTAB -------------------------------------
 
 if $VIM_CRONTAB == "true"
 set nobackup
 set nowritebackup
 endif
+
+set whichwrap+=<,>,h,l,[,]

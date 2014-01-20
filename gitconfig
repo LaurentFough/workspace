@@ -1,6 +1,6 @@
 [user]
 	name = Hubert
-	email = mathsmac@yahoo.fr
+	email = hubert.godfroy@inria.fr
 [core]
 	excludesfile = /Users/hubert/.gitignore_global
 [difftool "sourcetree"]

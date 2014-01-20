@@ -1,3 +1,6 @@
+# colore sdterr en rouge
+# exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
+
 # Tranquil
 export PATH=/usr/local/tranquil/bin:$PATH
 
@@ -24,6 +27,7 @@ eval `opam config env`
 export PAGER=vimpager
 alias less=$PAGER
 alias zless=$PAGER
+#alias sed='gsed'
 
 ###############################################################################
 ###############################################################################
@@ -240,6 +244,7 @@ unsetopt list_beep
 # cd inutile
 setopt auto_cd 
 
+export SVN_EDITOR=vim
 
 
 ##

@@ -4,11 +4,8 @@
 sudo echo "======> MacPorts"
 echo " "
 sudo port selfupdate
+port outdated
 echo " "
 echo "======> Opam"
 echo " "
 opam update; 
-echo " "
-echo "======> Outdated MacPorts"
-echo " "
-port outdated

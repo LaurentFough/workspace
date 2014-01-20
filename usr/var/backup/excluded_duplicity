@@ -11,4 +11,9 @@
 **/Library/SyncedPreferences
 **/.dropbox
 **/VirtualBox VMs
+**/Pictures/Aperture Library.aplibrary/iPod Photo Cache
+**/Library/Application Support/Steam
+**/Library
+**/.opam
+**/Dropbox/.dropbox.cache
 

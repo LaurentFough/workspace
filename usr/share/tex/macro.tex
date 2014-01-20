@@ -1,9 +1,8 @@
 % !TEX TS-program = latex
-% !TEX encoding = Windows Latin 1
 \documentclass[11pt]{article}
 
-%\usepackage[backend=bibtex, citestyle=alphabetic, bibstyle=alphabetic, language=french]{biblatex}
-%\addbibresource{../references.bib}
+\usepackage[backend=bibtex, citestyle=alphabetic, bibstyle=alphabetic, language=french]{biblatex}
+\addbibresource{~/.usr/var/bibtex/references.bib}
 
 %Fourier for math | Utopia (scaled) for rm | Helvetica for ss | Latin Modern for tt
 \usepackage[upright]{fourier} % math & rm
@@ -12,8 +11,8 @@
 
 % Latin Modern (similar to CM with more characters)
 %\usepackage{lmodern} % math, rm, ss, tt
-
-\usepackage{pdfsync}
+\synctex=1
+%\usepackage{pdfsync}
 \usepackage{geometry}
 \geometry{a4paper}
 \usepackage{amsmath}  % Maths
@@ -113,3 +112,6 @@
 
 \theoremstyle{definition}
 \newtheorem{définition}[theo]{D\'efinition }
+
+%\renewcommand{\labelitemi}{$\bullet$}
+
