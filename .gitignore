@@ -1,3 +1,4 @@
+*.pyc
 emacs.d
 vim/backup
 usr/share/gettext
