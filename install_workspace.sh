@@ -15,5 +15,18 @@ do
 	link=${file/$suffixe/"$HOME/."}
 	echo $file
 	echo "   -> $link"
-	ln -s $file $link
+  if [ -r $link ]
+  then
+    if [ "$1" == "--force" ]
+    then
+      echo "   -> écrase ancienne version"
+      rm $link
+      ln -s $file $link
+    else
+      echo "   -> déjà présent !"
+    fi
+  else
+    echo "   -> ok !"
+    ln -s $file $link
+  fi
 done
