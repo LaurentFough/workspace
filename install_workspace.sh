@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source usr/var/color/color
+
 locdir=$(pwd)
 listelements=$locdir/* #ne prends que les fichiers visibles
 
@@ -13,20 +15,20 @@ do
 		continue
 	fi
 	link=${file/$suffixe/"$HOME/."}
-	echo $file
-	echo "   -> $link"
+	$echo $file
+	$echo "   -> $link"
   if [ -r $link ]
   then
     if [ "$1" == "--force" ]
     then
-      echo "   -> écrase ancienne version"
+      $echo -e "${orange}   -> écrase ancienne version${neutre}"
       rm $link
       ln -s $file $link
     else
-      echo "   -> déjà présent !"
+      $echo -e "${rougefonce}   -> déjà présent !${neutre}"
     fi
   else
-    echo "   -> ok !"
+    $echo -e "${vertfonce}   -> ok !${neutre}"
     ln -s $file $link
   fi
 done
