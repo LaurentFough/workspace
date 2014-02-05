@@ -9,3 +9,8 @@ echo " "
 echo "======> Opam"
 echo " "
 opam update; 
+echo " "
+echo "======> Workspace"
+echo " "
+cd /Users/hubert/workspace/
+git pull
