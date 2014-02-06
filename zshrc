@@ -1,5 +1,6 @@
 # Scripts personnels
-export PATH=${PATH}:${HOME}/.usr/bin
+#export PATH=${PATH}:${HOME}/.usr/bin
+export PATH=${HOME}/.usr/bin:${PATH}
 
 # --------------------------------- VIMPAGER ----------------------------------
 

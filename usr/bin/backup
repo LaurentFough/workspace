@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo duplicity \
+	--verbosity info \
+	/etc \
+	ssh://hubert@abwabwa.org:55555/backup/etc
