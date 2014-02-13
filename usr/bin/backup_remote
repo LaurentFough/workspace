@@ -1,7 +1,6 @@
 #!/bin/bash
 DAY=$(date +%Y-%m-%d--%H:%M:%S--%A)
 SOURCE=/Users/hubert
-# SOURCE2=/Users/hubert/Documents
 TARGETBASE=hubert@hurlebouc.no-ip.org:/home/hubert/backup
 TARGET=$TARGETBASE/current
 BACKUPDIR=../$DAY/
