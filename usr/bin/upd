@@ -4,11 +4,13 @@
 sudo echo "======> MacPorts"
 echo " "
 sudo port selfupdate
+port outdated
 echo " "
 echo "======> Opam"
 echo " "
 opam update; 
 echo " "
-echo "======> Outdated MacPorts"
+echo "======> Workspace"
 echo " "
-port outdated
+cd /Users/hubert/workspace/
+git pull

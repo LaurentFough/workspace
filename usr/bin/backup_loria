@@ -1,10 +1,11 @@
 #!/bin/bash
 DAY=$(date +%Y-%m-%d--%H:%M:%S--%A)
 SOURCE=/Users/hubert
-TARGETBASE=hubert@hurlebouc.no-ip.org:/home/hubert/backup
+TARGETBASE=hgodfroy@loria.loria.fr:/users/carte/hgodfroy/backup
 TARGET=$TARGETBASE/current
 BACKUPDIR=../$DAY/
 EXCLUDED=~/.usr/var/backup/excluded
+LORIA=~/.usr/var/backup/rsync/excluded_loria
 
 terminal-notifier -message "Début de la sauvegarde" -title "Backup"
 
@@ -14,18 +15,17 @@ rsync \
 	--one-file-system \
 	--compress \
 	--hard-links \
-	--protect-args \
 	--human-readable \
 	--chmod=u=rwX,g-rwX,o-rwx \
 	--exclude-from=$EXCLUDED \
+	--exclude-from=$LORIA \
 	--inplace \
 	--delete \
 	--backup \
 	--delete-excluded \
 	--backup-dir=$BACKUPDIR \
 	$SOURCE $TARGET \
-	1> ~/Library/Logs/backup_rsync.log \
-	2> ~/Library/Logs/backup_rsync_errors.log
+	1> ~/Library/Logs/backup_rsync.log 2> ~/Library/Logs/backup_rsync_errors.log
 ret=$?
 
 if [ $ret -eq 0 ]; then
@@ -35,5 +35,4 @@ elif [ $ret -eq 23 ]; then
 else
 	terminal-notifier -message "La sauvegarde a échoué" -title "Backup"
 fi
-
 

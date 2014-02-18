@@ -1,0 +1,7 @@
+#!/bin/bash
+
+diskutil erasevolume HFS+ 'RAM Disk' `hdiutil attach -nomount ram://4194304`
+
+mkdir "/Volumes/RAM Disk/com.apple.Safari"
+mkdir "/Volumes/RAM Disk/com.apple.iTunes"
+#mkdir "/Volumes/RAM Disk/Caches"
