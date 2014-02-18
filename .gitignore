@@ -256,3 +256,4 @@ vim/ftdetect/vala.vim
 vim/syntax/vala.vim
 usr/share/man/man1/byobu-ugraph.1
 usr/share/man/man1/byobu-ulevel.1
+*.swp
