@@ -95,6 +95,7 @@ set shiftwidth=2                " number of spaces to use for each step of inden
 set showcmd                     " display incomplete commands
 set smartindent                 " smart autoindenting when starting a new line
 set tabstop=2                   " number of spaces that a <Tab> counts for
+set expandtab                   " tab -> space
 set noeb vb t_vb=               " la fin de ces putains de beeps !!!
 set wildignore=*.bak,*.o,*.e,*~ " wildmenu: ignore these extensions
 set wildmenu                    " command-line completion in an enhanced mode
