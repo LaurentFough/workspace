@@ -48,6 +48,7 @@ map <C-space> <C-n>
 map gt <C-]>
 
 
+set cryptmethod=blowfish
 
 
 let java_highlight_all=1

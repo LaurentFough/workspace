@@ -27,6 +27,7 @@
 \usepackage[francais]{babel}
 \usepackage{fancyhdr}
 \usepackage{calc} 		% arithmetique infixe des compteurs
+\usepackage{xspace}   % espace intelligent dans les macros
 \newcommand{\noind}{\noindent}
 \usepackage[bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
 \definecolor{dullmagenta}{rgb}{0.4,0,0.4}   % #660066
@@ -36,7 +37,7 @@
 
 \usepackage{tikz-cd}
 
-\newcommand{\imp}[1]{\textit{\textbf{#1}} }
+\newcommand{\imp}[1]{\textit{\textbf{#1}}\xspace}
 \renewcommand{\labelitemi}{$\bullet$}
  
 \newcommand{\R}{\mathbb{R}}
@@ -69,30 +70,31 @@
 
 % ---------------- Compilation -------------------
 
-\newcommand{\trad}[1]{\overline{#1}}
+\newcommand{\tradCPS}[1]{\overline{#1}}
+\newcommand{\tradWAM}[1]{\ent{#1}}
 
 % ---------------- Maths générales -------------------
 
-\newcommand{\ssi}{si et seulement si }
-\newcommand{\re}{\mbox{Re} }
-\newcommand{\im}{\mbox{Im} }
-\newcommand{\vect}{\mbox{vect} }
-\newcommand{\rg}{\mbox{rg} }
-\newcommand{\Ker}{\mbox{Ker} }
-\newcommand{\tr}{\mbox{tr} }
-\newcommand{\Sp}{\mbox{S}_{p} }
-\newcommand{\Quad}{\mbox{Quad} }
-\newcommand{\grad}{\overrightarrow{\mbox{grad}} }
-\newcommand{\rot}{\overrightarrow{\mbox{rot}} }
+\newcommand{\ssi}{si et seulement si\xspace}
+\newcommand{\re}{\mbox{Re}}
+\newcommand{\im}{\mbox{Im}}
+\newcommand{\vect}{\mbox{vect}}
+\newcommand{\rg}{\mbox{rg}}
+\newcommand{\Ker}{\mbox{Ker}}
+\newcommand{\tr}{\mbox{tr}}
+\newcommand{\Sp}{\mbox{S}_{p}}
+\newcommand{\Quad}{\mbox{Quad}}
+\newcommand{\grad}{\overrightarrow{\mbox{grad}}}
+\newcommand{\rot}{\overrightarrow{\mbox{rot}}}
 \newcommand{\cupplus}{\uplus}
 \newcommand{\bigcupplus}{\biguplus}
 \renewcommand{\tilde}[1]{\widetilde{#1}}
 \newcommand{\littletilde}[1]{\tilde{#1}}
 
-\newcommand{\noeud}{n\oe ud }
-\newcommand{\noeuds}{n\oe uds }
-\newcommand{\algo}{algorithme }
-\newcommand{\algos}{algorithmes }
+\newcommand{\noeud}{n\oe ud\xspace}
+\newcommand{\noeuds}{n\oe uds\xspace}
+\newcommand{\algo}{algorithme\xspace}
+\newcommand{\algos}{algorithmes\xspace}
 
 \newcommand{\defin}{\overset{\mathrm{def}}=}
 \newcommand{\notation}{\overset{\mathrm{not}}=}
@@ -153,7 +155,7 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \theoremstyle{definition}
 \newtheorem{definition}[theo]{D\'efinition }
 
-\newcommand{\red}[1]{\textcolor{red}{#1} }
+\newcommand{\red}[1]{\textcolor{red}{#1}\xspace}
 \newcommand{\metatext}[1]{
   \vspace{3mm}
   \noindent\red{\fbox{
@@ -236,7 +238,7 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 
 %---------------- Instructions ----------------
 
-\newcommand{\instr}[1]{\mathtt{#1\;}}
+\newcommand{\instr}[1]{\mathtt{#1}}
 
 \newcommand{\jump}{\instr{jump}}
 \newcommand{\move}{\instr{move}}
@@ -246,9 +248,11 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \newcommand{\throw}{\instr{restore}}
 \newcommand{\erase}{\instr{erase}}
 
-\newcommand{\switch}{\instr{switch}}
-\newcommand{\activate}{\instr{activate}}
-\newcommand{\inactivate}{\instr{inactivate}}
+\newcommand{\switch}[1]{\instr{switch}_{#1}}
+\newcommand{\activate}[1]{\instr{activate}_{#1}}
+\newcommand{\inactivate}[1]{\instr{inactivate}_{#1}}
+\newcommand{\store}{\instr{store}}
+\newcommand{\copie}{\instr{copy}}
 
 %---------------- Ensembles ----------------
 
@@ -268,11 +272,23 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \newcommand{\reld}{\rel_\data}
 \renewcommand{\equiv}{\Leftrightarrow}
 
-\newcommand{\Rogers}{\textsc{Rogers }}
-\newcommand{\rogers}{\textsc{Rogers }}
-\newcommand{\Plotkin}{\textsc{Plotkin }}
-\newcommand{\plotkin}{\textsc{Plotkin }}
+%---------------- Raccourcis ----------------
 
-\newcommand{\latin}[1]{\textit{#1}}
+\newcommand{\lc}{$\lambda$-calcul}
+
+\newcommand{\Rogers}{\textsc{Rogers}\xspace}
+\newcommand{\rogers}{\textsc{Rogers}\xspace}
+\newcommand{\Church}{\textsc{Church}\xspace}
+\newcommand{\church}{\textsc{Church}\xspace}
+\newcommand{\Plotkin}{\textsc{Plotkin}\xspace}
+\newcommand{\plotkin}{\textsc{Plotkin}\xspace}
+
+% ---------------- Latin -------------------
+
+\newcommand{\latin}[1]{\textit{#1}\xspace}
+\newcommand{\via}{\latin{via}}
+\newcommand{\exnihilo}{\latin{ex nihilo}}
+
+
 \newcommand{\cctransfo}{cc}
 \newcommand{\comp}{\C}

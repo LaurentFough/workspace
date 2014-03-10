@@ -3,6 +3,7 @@
 	email = hubert.godfroy@inria.fr
 [core]
 	excludesfile = /Users/hubert/.gitignore_global
+	deltaBaseCacheLimit = 1G
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

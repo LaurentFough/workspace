@@ -16,7 +16,7 @@ export PATH=${PATH}:${HOME}/.usr/bin
 # export PATH=${PATH}:${HOME}/Dropbox/projects/ml-overloading/src
 
 
-
+export PATH="$PATH":${HOME}/src/depot_tools
 
 # cabal
 # export PATH=${HOME}/.cabal/bin:${PATH}
