@@ -1,6 +1,7 @@
 [user]
 	name = Hubert
-	email = hubert.godfroy@inria.fr
+	email = hubert@poipoi.org
+	signingkey = FEBCBBF7
 [core]
 	excludesfile = /Users/hubert/.gitignore_global
 	deltaBaseCacheLimit = 1G
