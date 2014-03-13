@@ -17,12 +17,13 @@ alias zless=$PAGER
 ###############
 
 # crontab
-
 alias crontab="VIM_CRONTAB=true crontab"
 
 # ledit
-
 alias ocaml="ledit ocaml"
+
+# SSH
+alias proxy="ssh -nNTC -D 8080"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
