@@ -303,3 +303,10 @@ set nowritebackup
 endif
 
 set whichwrap+=<,>,h,l,[,]
+
+" -------------------------------- LILYPOND -----------------------------------
+"
+filetype off
+set runtimepath+=/opt/local/share/lilypond/2.18.0/vim/
+filetype on
+
