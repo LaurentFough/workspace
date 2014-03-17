@@ -77,16 +77,16 @@
 % ---------------- Maths générales -------------------
 
 \newcommand{\ssi}{si et seulement si\xspace}
-\newcommand{\re}{\mbox{Re}}
-\newcommand{\im}{\mbox{Im}}
-\newcommand{\vect}{\mbox{vect}}
-\newcommand{\rg}{\mbox{rg}}
-\newcommand{\Ker}{\mbox{Ker}}
-\newcommand{\tr}{\mbox{tr}}
-\newcommand{\Sp}{\mbox{S}_{p}}
-\newcommand{\Quad}{\mbox{Quad}}
-\newcommand{\grad}{\overrightarrow{\mbox{grad}}}
-\newcommand{\rot}{\overrightarrow{\mbox{rot}}}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\vect}{vect}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Sp}{S_{p}}
+\DeclareMathOperator{\Quad}{Quad}
+\DeclareMathOperator{\grad}{\overrightarrow{grad}}
+\DeclareMathOperator{\rot}{\overrightarrow{rot}}
 \newcommand{\cupplus}{\uplus}
 \newcommand{\bigcupplus}{\biguplus}
 \renewcommand{\tilde}[1]{\widetilde{#1}}
@@ -209,7 +209,7 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \newcommand{\eva}{\kw{eval\; }}
 \newcommand{\Throw}{\kw{throw\; }}
 
-\newcommand{\eval}[2]{\ent{#2}_{#1}}
+%\newcommand{\eval}[2]{\ent{#2}_{#1}}
 
 \newcommand{\mf}[1]{\mathsf{#1}}
 \newcommand{\Stop}{\mf{stop}}
@@ -241,19 +241,28 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 
 \newcommand{\instr}[1]{\mathtt{#1}}
 
-\newcommand{\jump}{\instr{jump}}
-\newcommand{\move}{\instr{move}}
-\newcommand{\return}{\instr{return}}
+\DeclareMathOperator{\jump}{\instr{jump}}
+\DeclareMathOperator{\move}{\instr{move}}
+\DeclareMathOperator{\return}{\instr{return}}
 
-\newcommand{\jumpcc}{\instr{jumpcc}}
-\newcommand{\throw}{\instr{restore}}
-\newcommand{\erase}{\instr{erase}}
+\DeclareMathOperator{\jumpcc}{\instr{jumpcc}}
+\DeclareMathOperator{\throw}{\instr{restore}}
+\DeclareMathOperator{\erase}{\instr{erase}}
+\DeclareMathOperator{\eval}{\instr{eval}}
 
-\newcommand{\switch}[1]{\instr{switch}_{#1}}
-\newcommand{\activate}[1]{\instr{activate}_{#1}}
-\newcommand{\inactivate}[1]{\instr{inactivate}_{#1}}
-\newcommand{\store}{\instr{store}}
-\newcommand{\copie}{\instr{copy}}
+%\newcommand{\switch}[1]{\instr{switch}_{#1}}
+\DeclareMathOperator{\switch}{\instr{switch}}
+%\newcommand{\activate}[1]{\instr{activate}_{#1}}
+\DeclareMathOperator{\activate}{\instr{activate}}
+%\newcommand{\inactivate}[1]{\instr{inactivate}_{#1}}
+\DeclareMathOperator{\inactivate}{\instr{inactivate}}
+\newcommand{\store}[1]{\instr{store}_{#1}}
+%\newcommand{\restore}{\instr{restore}\xspace}
+\DeclareMathOperator{\restore}{\instr{restore}}
+\newcommand{\closure}[1]{\instr{closure}_{#1}}
+\DeclareMathOperator{\push}{\instr{push}}
+\DeclareMathOperator{\pop}{\instr{pop}}
+\DeclareMathOperator{\copie}{\instr{copy}}
 
 %---------------- Ensembles ----------------
 
@@ -278,11 +287,15 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \newcommand{\lc}{$\lambda$-calcul}
 
 \newcommand{\Rogers}{\textsc{Rogers}\xspace}
-\newcommand{\rogers}{\textsc{Rogers}\xspace}
+\newcommand{\rogers}{\Rogers}
 \newcommand{\Church}{\textsc{Church}\xspace}
-\newcommand{\church}{\textsc{Church}\xspace}
+\newcommand{\church}{\Church}
 \newcommand{\Plotkin}{\textsc{Plotkin}\xspace}
-\newcommand{\plotkin}{\textsc{Plotkin}\xspace}
+\newcommand{\plotkin}{\Plotkin}
+\newcommand{\krivine}{\textsc{Krivine}\xspace}
+\newcommand{\Krivine}{\krivine}
+\newcommand{\reynaud}{\textsc{Reynaud}\xspace}
+\newcommand{\Reynaud}{\reynaud}
 
 % ---------------- Latin -------------------
 
