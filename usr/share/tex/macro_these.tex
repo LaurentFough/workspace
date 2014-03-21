@@ -49,15 +49,17 @@
 \newcommand{\T}{\mathbb{T}}
 \newcommand{\G}{\mathcal{G}}
 \renewcommand{\P}{\mathcal{P}}
+\newcommand{\Pf}{\mathcal{P}_f}
 \newcommand{\Gs}{\G_s}
 
 \newcommand{\zone}[1]{\mathbf{#1}}
-\newcommand{\Z}{\zone{Z}}
 \newcommand{\X}{\zone{X}}
 \newcommand{\D}{\zone{D}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\Name}{\zone{N}}
 \newcommand{\s}{\mathcal{S}}
+
+\DeclareMathOperator{\fcorres}{\zeta}
 
 % ---------------- Catégories -------------------
 
@@ -91,6 +93,7 @@
 \newcommand{\bigcupplus}{\biguplus}
 \renewcommand{\tilde}[1]{\widetilde{#1}}
 \newcommand{\littletilde}[1]{\tilde{#1}}
+\renewcommand{\succ}{\operatorname{\triangleright}}
 
 \newcommand{\noeud}{n\oe ud\xspace}
 \newcommand{\noeuds}{n\oe uds\xspace}
@@ -134,7 +137,7 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
   %\chead{ }
 % \rhead{ } 
 \cfoot{\thepage}
-%\rfoot{\textsf{\textit{DRAFT (\today)}}}
+\rfoot{\textsf{\textit{DRAFT (\today)}}}
 
 %\renewcommand{\headrulewidth}{0.6pt}
 %\renewcommand{\headrule}{{\color{gray}%
@@ -266,9 +269,13 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 
 %---------------- Ensembles ----------------
 
-\newcommand{\set}[1]{\mathbb{#1}}
+\newcommand{\set}[1]{\mathcal{#1}}
 \newcommand{\prog}{\set{P}}
+\newcommand{\addr}{\set{A}}
 \newcommand{\data}{\set{D}}
+\newcommand{\inst}{\set{I}}
+\newcommand{\zones}{\set{Z}}
+\newcommand{\mem}{\set{M}}
 
 %---------------- Méta notations ----------------
 
@@ -286,15 +293,16 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 
 \newcommand{\lc}{$\lambda$-calcul}
 
-\newcommand{\Rogers}{\textsc{Rogers}\xspace}
+\newcommand{\name}[1]{\textsc{#1}}
+\newcommand{\Rogers}{\name{Rogers}\xspace}
 \newcommand{\rogers}{\Rogers}
-\newcommand{\Church}{\textsc{Church}\xspace}
+\newcommand{\Church}{\name{Church}\xspace}
 \newcommand{\church}{\Church}
-\newcommand{\Plotkin}{\textsc{Plotkin}\xspace}
+\newcommand{\Plotkin}{\name{Plotkin}\xspace}
 \newcommand{\plotkin}{\Plotkin}
-\newcommand{\krivine}{\textsc{Krivine}\xspace}
+\newcommand{\krivine}{\name{Krivine}\xspace}
 \newcommand{\Krivine}{\krivine}
-\newcommand{\reynaud}{\textsc{Reynaud}\xspace}
+\newcommand{\reynaud}{\name{Reynaud}\xspace}
 \newcommand{\Reynaud}{\reynaud}
 
 % ---------------- Latin -------------------
