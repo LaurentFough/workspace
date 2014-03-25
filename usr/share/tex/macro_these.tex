@@ -41,6 +41,8 @@
 \newcommand{\imp}[1]{\textit{\textbf{#1}}\xspace}
 \renewcommand{\labelitemi}{$\bullet$}
  
+% ---------------- Maths générales -------------------
+
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathcal{C}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -55,29 +57,10 @@
 \newcommand{\zone}[1]{\mathbf{#1}}
 \newcommand{\X}{\zone{X}}
 \newcommand{\D}{\zone{D}}
+\newcommand{\Z}{\zone{Z}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\Name}{\zone{N}}
 \newcommand{\s}{\mathcal{S}}
-
-\DeclareMathOperator{\fcorres}{\zeta}
-
-% ---------------- Catégories -------------------
-
-\newcommand{\categorie}[1]{\mathbf{#1}}
-\newcommand{\Lang}{\categorie{Lang}}
-\newcommand{\CCat}{\categorie{C}}
-
-\newcommand{\functor}[1]{\mathrm{#1}}
-\newcommand{\Id}{\functor{Id}}
-\newcommand{\To}{\Rightarrow}
-
-% ---------------- Compilation -------------------
-
-\newcommand{\tradCPS}[1]{\overline{#1}}
-\newcommand{\tradWAM}[1]{\ent{#1}}
-
-% ---------------- Maths générales -------------------
-
 \newcommand{\ssi}{si et seulement si\xspace}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
@@ -216,7 +199,8 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 
 \newcommand{\mf}[1]{\mathsf{#1}}
 \newcommand{\Stop}{\mf{stop}}
-\newcommand{\sep}{\; \vert\;}
+%\newcommand{\sep}{\; \vert\;}
+\DeclareMathOperator{\sep}{\vert}
 \newcommand{\dom}{\mathrm{dom}}
 
 \newcommand{\imply}{\Rightarrow}
@@ -239,6 +223,8 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 
 %\newcommand{\weakreduce}{\rightsquigarrow}
 \newcommand{\weakreduce}{=}
+\DeclareMathOperator{\reduce}{\to}
+\DeclareMathOperator{\longreduce}{\longrightarrow}
 
 %---------------- Instructions ----------------
 
@@ -267,6 +253,27 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \DeclareMathOperator{\pop}{\instr{pop}}
 \DeclareMathOperator{\copie}{\instr{copy}}
 
+% -------------- Atomes ---------------
+
+\DeclareMathOperator{\fcorres}{\mu} % mémoire (fonction de correspondance)
+\DeclareMathOperator{\ft}{\tau} % trace (une fonction)
+\DeclareMathOperator{\thunk}{\theta} % suspension
+
+% ---------------- Catégories -------------------
+
+\newcommand{\categorie}[1]{\mathbf{#1}}
+\newcommand{\Lang}{\categorie{Lang}}
+\newcommand{\CCat}{\categorie{C}}
+
+\newcommand{\functor}[1]{\mathrm{#1}}
+\newcommand{\Id}{\functor{Id}}
+\newcommand{\To}{\Rightarrow}
+
+% ---------------- Compilation -------------------
+
+\newcommand{\tradCPS}[1]{\overline{#1}}
+\newcommand{\tradWAM}[1]{\ent{#1}}
+
 %---------------- Ensembles ----------------
 
 \newcommand{\set}[1]{\mathcal{#1}}
@@ -276,6 +283,15 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \newcommand{\inst}{\set{I}}
 \newcommand{\zones}{\set{Z}}
 \newcommand{\mem}{\set{M}}
+\newcommand{\state}{\set{S}}
+\newcommand{\val}{\set{V}} % valuations
+\newcommand{\thunks}{\set{T}} % 
+\newcommand{\waves}{\set{W}} % 
+
+%---- Structures (couples, automates, ...) ------
+
+\newcommand{\struct}[1]{\mathsf{#1}}
+\newcommand{\m}{\struct{M}}
 
 %---------------- Méta notations ----------------
 
