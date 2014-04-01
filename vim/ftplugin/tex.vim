@@ -9,3 +9,4 @@ map <leader>b :silent! call Tex_RunLaTeX()<cr>
 
 set spell
 set spelllang=fr
+let g:Imap_UsePlaceHolders = 0
