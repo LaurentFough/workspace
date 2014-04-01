@@ -253,11 +253,7 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \DeclareMathOperator{\pop}{\instr{pop}}
 \DeclareMathOperator{\copie}{\instr{copy}}
 
-% -------------- Atomes ---------------
 
-\DeclareMathOperator{\fcorres}{\mu} % mémoire (fonction de correspondance)
-\DeclareMathOperator{\ft}{\tau} % trace (une fonction)
-\DeclareMathOperator{\thunk}{\theta} % suspension
 
 % ---------------- Catégories -------------------
 
@@ -285,9 +281,21 @@ keywordstyle=\color{blue}, frame=lines, backgroundcolor=\color{gris}, breaklines
 \newcommand{\mem}{\set{M}}
 \newcommand{\state}{\set{S}}
 \newcommand{\val}{\set{V}} % valuations
-\newcommand{\thunks}{\set{T}} % 
-\newcommand{\waves}{\set{W}} % 
-\newcommand{\level}{\set{N}} % 
+\newcommand{\thunks}{\Sigma} 
+\newcommand{\waves}{\set{W}} 
+\newcommand{\levels}{\set{N}} 
+\newcommand{\owners}{\set{O}}
+\newcommand{\gammas}{\set{G}} % environnements
+\newcommand{\traces}{\set{T}}
+
+
+% -------------- Inhabitants ---------------
+
+\DeclareMathOperator{\fcorres}{\mu} % mémoire (fonction de correspondance)
+\DeclareMathOperator{\ft}{\tau} % trace (une fonction)
+\DeclareMathOperator{\thunk}{\theta} % suspension
+\newcommand{\owner}{o} % possesseur
+\newcommand{\level}{n} % niveau
 
 %---- Structures (couples, automates, ...) ------
 
