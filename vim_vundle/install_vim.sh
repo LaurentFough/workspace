@@ -51,3 +51,4 @@ else
   $echo -e "${vertfonce}   -> ok !${neutre}"
   git clone https://github.com/gmarik/Vundle.vim.git $link
 fi
+vim +PluginInstall +qall
