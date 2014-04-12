@@ -14,6 +14,10 @@ do
 	then
 		continue
 	fi
+	if [ "${file}" == "$locdir/vim_vundle" ]
+	then
+		continue
+	fi
 	link=${file/$suffixe/"$HOME/."}
 	echo $file
 	echo "   -> $link"
@@ -32,3 +36,6 @@ do
     ln -s $file $link
   fi
 done
+
+cd vim_vundle
+./install_vim.sh $1
