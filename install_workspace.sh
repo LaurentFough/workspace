@@ -37,5 +37,5 @@ do
   fi
 done
 
-cd vim_bundle
-./install_vim.sh
+cd vim_vundle
+./install_vim.sh $1
