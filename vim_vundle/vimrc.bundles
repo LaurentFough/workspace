@@ -1,0 +1,16 @@
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Plugin 'gmarik/vundle'
+Plugin 'hurlebouc/vim-config'
+Plugin 'the-lambda-church/coquille'
+Plugin 'def-lkb/vimbufsync'
+Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+"Plugin 'flazz/vim-colorschemes'
+Plugin 'altercation/vim-colors-solarized'
+
+filetype plugin indent on
+syntax on

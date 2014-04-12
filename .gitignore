@@ -257,3 +257,5 @@ vim/syntax/vala.vim
 usr/share/man/man1/byobu-ugraph.1
 usr/share/man/man1/byobu-ulevel.1
 *.swp
+ghci_history
+ghc/x86_64-darwin-7.6.3

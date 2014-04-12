@@ -19,5 +19,6 @@ export PATH=${PATH}:${HOME}/.usr/bin
 export PATH="$PATH":${HOME}/src/depot_tools
 
 # cabal
-# export PATH=${HOME}/.cabal/bin:${PATH}
+export PATH=${HOME}/.cabal/bin:${PATH}
+export PATH=${HOME}/.cabal-sandbox/bin:${PATH}
 # export PATH="$HOME/Library/Haskell/bin:$PATH"

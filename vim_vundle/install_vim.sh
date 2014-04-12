@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source usr/var/color/color
+source ../usr/var/color/color
 
 locdir=$(pwd)
 listelements=$locdir/* #ne prends que les fichiers visibles
@@ -10,11 +10,7 @@ suffixe="$locdir/"
 
 for file in $listelements
 do
-	if [ "${file}" == "$locdir/install_workspace.sh" ]
-	then
-		continue
-	fi
-	if [ "${file}" == "$locdir/vim_vundle" ]
+	if [ "${file}" == "$locdir/install_vim.sh" ]
 	then
 		continue
 	fi
@@ -36,6 +32,3 @@ do
     ln -s $file $link
   fi
 done
-
-cd vim_bundle
-./install_vim.sh
