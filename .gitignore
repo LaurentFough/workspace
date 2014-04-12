@@ -21,3 +21,8 @@ usr/share/man/
 usr/bin/rdiffdir
 vim/doc/imaps.txt.gz
 vim/compiler/tex.vim
+usr/bin/backup
+usr/lib/
+usr/share/locale/
+vim_vundle/vim/backup
+vim_vundle/vim/bundle
