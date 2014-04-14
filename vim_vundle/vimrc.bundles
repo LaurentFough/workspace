@@ -11,6 +11,9 @@ Plugin 'def-lkb/vimbufsync'
 Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 "Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
+"Plugin 'c.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'justinmk/vim-syntax-extra'
 
 filetype plugin indent on
 syntax on
