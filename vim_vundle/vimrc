@@ -49,22 +49,8 @@ if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"
 	color solarized             " Load a colorscheme
 endif
 
-if has('gui_running')
-	set guioptions-=T           " Remove the toolbar
-	set lines=40                " 40 lines of text instead of 24
-	if !exists("g:spf13_no_big_font")
-		if LINUX() && has("gui_running")
-			set guifont=Andale\ Mono\ Regular\ 16,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
-		elseif OSX() && has("gui_running")
-			set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
-		elseif WINDOWS() && has("gui_running")
-			set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
-		endif
-	endif
-else
-	if &term == 'xterm' || &term == 'screen'
-		set t_Co=256
-	endif
+if &term == 'xterm' || &term == 'screen'
+  set t_Co=256
 endif
 
 set number
@@ -93,25 +79,9 @@ let java_highlight_all=1
 let java_highlight_functions="style"
 
 
-" Platform specific items:
-" - central backup directory (has to be created)
-" - default dictionary
-" Uncomment your choice.  
-if  has("win16") || has("win32")     || has("win64") || 
-  \ has("win95") || has("win32unix")
-    "
-"    runtime mswin.vim
-"    set backupdir =$VIM\vimfiles\backupdir
-"    set dictionary=$VIM\vimfiles\wordlists/german.list
-else
-	set backupdir =$HOME/.vim/backup
-"    set dictionary=$HOME/.vim/wordlists/german.list
-endif
-"
-" Using a backupdir under UNIX/Linux: you may want to include a line similar to
-"   find  $HOME/.vim.backupdir -name "*" -type f -mtime +60 -exec rm -f {} \;
-" in one of your shell startup files (e.g. $HOME/.profile)
-"
+set backupdir =$HOME/.vim/backup
+"set dictionary=$HOME/.vim/wordlists/german.list
+
 "-------------------------------------------------------------------------------
 " Various settings
 "-------------------------------------------------------------------------------
@@ -127,7 +97,6 @@ set hlsearch                    " highlight the last used search pattern
 set incsearch                   " do incremental searching
 set listchars=tab:>.,eol:\$     " strings to use in 'list' mode
 set mouse=a                     " enable the use of the mouse
-" set nowrap                      " do not wrap lines
 set popt=left:8pc,right:3pc     " print options
 set ruler                       " show the cursor position all the time
 set shiftwidth=2                " number of spaces to use for each step of indent
@@ -139,7 +108,8 @@ set expandtab                   " tab -> space
 set noeb vb t_vb=               " la fin de ces putains de beeps !!!
 set wildignore=*.bak,*.o,*.e,*~ " wildmenu: ignore these extensions
 set wildmenu                    " command-line completion in an enhanced mode
-"
+" set nowrap                      " do not wrap lines
+
 "===============================================================================
 " BUFFERS, WINDOWS
 "===============================================================================
@@ -150,13 +120,7 @@ set wildmenu                    " command-line completion in an enhanced mode
 if has("autocmd")
   autocmd BufEnter * :lchdir %:p:h
 endif
-"
-"-------------------------------------------------------------------------------
-" close window (conflicts with the KDE setting for calling the process manager)
-"-------------------------------------------------------------------------------
- noremap  <C-Esc>       :close<CR>
-inoremap  <C-Esc>  <C-C>:close<CR>
-"
+
 "-------------------------------------------------------------------------------
 " Fast switching between buffers
 " The current buffer will be saved before switching to the next one.
@@ -212,69 +176,8 @@ imap  <silent> <F6>   <Esc>:cclose<CR>
 imap  <silent> <F7>   <Esc>:cp<CR>
 imap  <silent> <F8>   <Esc>:cn<CR>
 imap  <C-Space>				<C-n>
-"
-"-------------------------------------------------------------------------------
-" Fast switching between buffers
-" The current buffer will be saved before switching to the next one.
-" Choose :bprevious or :bnext
-"-------------------------------------------------------------------------------
-"
- map  <silent> <s-tab>  <Esc>:if &modifiable && !&readonly && 
-     \                  &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-imap  <silent> <s-tab>  <Esc>:if &modifiable && !&readonly && 
-     \                  &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-"
-"-------------------------------------------------------------------------------
-" Leave the editor with Ctrl-q : Write all changed buffers and exit Vim
-"-------------------------------------------------------------------------------
-nmap  <C-q>    :wqa<CR>
-"
-"-------------------------------------------------------------------------------
-" comma always followed by a space
-"-------------------------------------------------------------------------------
-"inoremap  ,  ,<Space>
-"
-"-------------------------------------------------------------------------------
-" autocomplete parenthesis, brackets and braces
-"-------------------------------------------------------------------------------
-"inoremap ( ()<Left>
-"inoremap [ []<Left>
-"inoremap { {}<Left>
-"
-"vnoremap ( s()<Esc>P<Right>%
-"vnoremap [ s[]<Esc>P<Right>%
-"vnoremap { s{}<Esc>P<Right>%
-"
-"-------------------------------------------------------------------------------
-" autocomplete quotes (visual and select mode)
-"-------------------------------------------------------------------------------
-"xnoremap  '  s''<Esc>P<Right>
-"xnoremap  "  s""<Esc>P<Right>
-"xnoremap  `  s``<Esc>P<Right>
-"
-"-------------------------------------------------------------------------------
-" Change the working directory to the directory containing the current file
-"-------------------------------------------------------------------------------
-if has("autocmd")
-  autocmd BufEnter * :lchdir %:p:h
-endif " has("autocmd")
-"
-"===============================================================================
-" VARIOUS PLUGIN CONFIGURATIONS
-"===============================================================================
-"
-"-------------------------------------------------------------------------------
-" c.vim
-"-------------------------------------------------------------------------------
-"            
-" --empty --
-"                         
-"-------------------------------------------------------------------------------
-" taglist.vim : toggle the taglist window
-" taglist.vim : define the title texts for make
-" taglist.vim : define the title texts for qmake
-"-------------------------------------------------------------------------------
- noremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
+
+noremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
 inoremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
 
 let Tlist_GainFocus_On_ToggleOpen = 1
@@ -340,10 +243,3 @@ set nowritebackup
 endif
 
 set whichwrap+=<,>,h,l,[,]
-
-" -------------------------------- LILYPOND -----------------------------------
-"
-"filetype off
-"set runtimepath+=/opt/local/share/lilypond/2.18.0/vim/
-"filetype on
-
