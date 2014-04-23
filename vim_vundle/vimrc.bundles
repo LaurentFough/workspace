@@ -14,6 +14,7 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'c.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'justinmk/vim-syntax-extra'
+Plugin 'idris-hackers/idris-vim'
 
 filetype plugin indent on
 syntax on
