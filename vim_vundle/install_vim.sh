@@ -33,6 +33,8 @@ do
   fi
 done
 
+# Installation de Vundle
+
 link=~/.vim/bundle/vundle
 $echo vundle
 $echo "   -> $link"
