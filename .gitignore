@@ -262,3 +262,4 @@ ghc/x86_64-darwin-7.6.3
 vim_vundle/vim/bundle
 vim_vundle/vim/backup
 SublerCLI
+byobu
