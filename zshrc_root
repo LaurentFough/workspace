@@ -4,8 +4,7 @@ export PATH=${HOME}/.usr/bin:${PATH}
 
 # --------------------------------- VIMPAGER ----------------------------------
 
-
-export PAGER=vimpager
+export PAGER=most
 alias less=$PAGER
 alias zless=$PAGER
 
