@@ -3,7 +3,8 @@ eval "$(dircolors -b)"
 # --------------------------------- VIMPAGER ----------------------------------
 
 
-export PAGER=vimpager
+#export PAGER=vimpager
+export PAGER=most
 alias less=$PAGER
 alias zless=$PAGER
 #alias sed='gsed'
