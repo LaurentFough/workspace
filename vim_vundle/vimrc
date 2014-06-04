@@ -69,6 +69,8 @@ map <D-d> :vsplit<cr><C-w>l
 map <D-D> :split<cr><C-w>j
 imap <D-d> <esc>:vsplit<cr><C-w>l
 imap <D-D> <esc>:split<cr><C-w>j
+map <D-F> <C-w>f<C-w>J
+imap <D-F> <esc><C-w>f<C-w>J
 map <C-space> <C-n>
 
 map gt <C-]>
