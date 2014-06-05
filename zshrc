@@ -38,6 +38,7 @@ alias svim="sudo vim"
 alias reload="source ~/.zshrc"
 # Raccourcis pour 'ls'
 alias ls="ls --color"
+alias l="ls --color"
 alias ll='ls -hl --color'
 alias la='ls -a --color'
 alias lla='ls -hla --color'
