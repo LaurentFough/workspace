@@ -6,10 +6,10 @@ echo " "
 sudo port selfupdate
 port outdated
 echo " "
-echo "======> Opam"
-echo " "
-opam update; 
-echo " "
+#echo "======> Opam"
+#echo " "
+#opam update; 
+#echo " "
 echo "======> Workspace"
 echo " "
 cd /Users/hubert/workspace/
