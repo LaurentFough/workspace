@@ -74,6 +74,7 @@ imap <D-F> <esc><C-w>f<C-w>J
 map <C-space> <C-n>
 
 map gt <C-]>
+map ù %x``x
 
 
 set cryptmethod=blowfish
