@@ -6,4 +6,5 @@ diskutil erasevolume HFS+ 'RAM Disk' `hdiutil attach -nomount ram://2097152`
 mkdir "/Volumes/RAM Disk/com.apple.Safari"
 mkdir "/Volumes/RAM Disk/com.apple.iTunes"
 mkdir "/Volumes/RAM Disk/Firefox"
+mkdir "/Volumes/RAM Disk/Google"
 #mkdir "/Volumes/RAM Disk/Caches"
