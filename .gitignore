@@ -26,3 +26,8 @@ usr/lib/
 usr/share/locale/
 vim_vundle/vim/backup
 vim_vundle/vim/bundle
+byobu*
+*byobu*
+.netrwhist
+ghc/x86_64-darwin-7.6.3
+ghci_history
