@@ -7,7 +7,7 @@
  new_certs_dir  = $dir/newcerts         # new certs dir
  
  certificate    = @CERT@                # The CA cert
- serial         = serial                # serial no file
+ serial         = $dir/serial           # serial no file
  private_key    = @KEY@                 # CA private key
  RANDFILE       = $dir/private/.rand    # random number file
  

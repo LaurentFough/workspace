@@ -31,6 +31,8 @@ pathname=$path/$nom
 rm -rf $pathname
 mkdir $pathname
 mkdir $pathname/private
+mkdir $pathname/newcerts
+echo "01" > $pathname/serial
 chmod g-rwx $pathname/private
 chmod o-rwx $pathname/private
 touch $pathname/index.txt
@@ -48,10 +50,6 @@ pathnamesed=${pathname//\//\\\/}
 crtfilesed=${crtfile//\//\\\/}
 keyfilesed=${keyfile//\//\\\/}
 
-echo $pathnamesed
-cmd="sed \"s/@PATHNAME@/$pathnamesed/g\" $configfile > $configfile"
-echo $cmd
-
 sed "s/@PATHNAME@/$pathnamesed/g" $configfile > ${configfile}.tmp
 cat ${configfile}.tmp > $configfile
 sed "s/@CERT@/$crtfilesed/g" $configfile > ${configfile}.tmp
@@ -59,5 +57,3 @@ cat ${configfile}.tmp > $configfile
 sed "s/@KEY@/$keyfilesed/g" $configfile > ${configfile}.tmp
 cat ${configfile}.tmp > $configfile
 rm ${configfile}.tmp
-
-#openssl ca -config openssl_tools/ca.conf -in request.csr -out certif.crt
