@@ -1,0 +1,59 @@
+#!/bin/bash
+
+base=$0
+binpath=${base/%\/make_CA/}
+template=$binpath/ca.conf.template
+
+echo -n "Nom [] : "
+read nom
+
+configfile=~/.ca/${nom}.conf
+
+if [ -e $configfile ]
+then
+  echo "Ce profile existe déjà"
+  exit 0
+fi
+
+echo -n "Chemin [~/.ca] : "
+read path
+if [[ $path == "" ]]
+then path=~/.ca
+fi
+
+if [ ! -d $path ]
+then 
+  echo "Erreur"
+  exit 0
+fi
+
+pathname=$path/$nom
+rm -rf $pathname
+mkdir $pathname
+mkdir $pathname/private
+mkdir $pathname/newcerts
+echo "01" > $pathname/serial
+chmod g-rwx $pathname/private
+chmod o-rwx $pathname/private
+touch $pathname/index.txt
+
+keyfile=$pathname/private/${nom}.key
+crtfile=$pathname/${nom}.crt
+
+$binpath/make_key 4096 --password > $keyfile
+
+openssl req -new -x509 -key $keyfile -out $crtfile
+
+cp $template $configfile
+
+pathnamesed=${pathname//\//\\\/}
+crtfilesed=${crtfile//\//\\\/}
+keyfilesed=${keyfile//\//\\\/}
+
+sed "s/@PATHNAME@/$pathnamesed/g" $configfile > ${configfile}.tmp
+cat ${configfile}.tmp > $configfile
+sed "s/@CERT@/$crtfilesed/g" $configfile > ${configfile}.tmp
+cat ${configfile}.tmp > $configfile
+sed "s/@KEY@/$keyfilesed/g" $configfile > ${configfile}.tmp
+cat ${configfile}.tmp > $configfile
+rm ${configfile}.tmp

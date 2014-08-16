@@ -1,0 +1,1 @@
+[ -r /Users/hubert/Dropbox/workspace/usr/share/byobu/profiles/bashrc ] && . /Users/hubert/Dropbox/workspace/usr/share/byobu/profiles/bashrc  #byobu-prompt#
