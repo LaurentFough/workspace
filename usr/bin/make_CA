@@ -40,7 +40,7 @@ touch $pathname/index.txt
 keyfile=$pathname/private/${nom}.key
 crtfile=$pathname/${nom}.crt
 
-$binpath/make_key 4096 > $keyfile
+$binpath/make_key 4096 --password > $keyfile
 
 openssl req -new -x509 -key $keyfile -out $crtfile
 

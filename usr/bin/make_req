@@ -1,7 +1,7 @@
 #!/bin/bash
 
 base=$0
-path=${base/%\/*/}
+path=${base/%\/make_req/}
 conf=$path/openssl.cnf
 #openssl req -new -key $1 -out request.csr -config $conf
 openssl req -new -key $1 -config $conf
