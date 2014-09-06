@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#openssl genrsa -out servwiki.key 4096
+if [[ $2 == "--password" ]]
+then
+  openssl genrsa -des3 $1
+else
+  openssl genrsa $1
+fi

@@ -1,13 +1,13 @@
-# Scripts personnels
-#export PATH=${PATH}:${HOME}/.usr/bin
-export PATH=${HOME}/.usr/bin:${PATH}
+eval "$(dircolors -b)"
 
 # --------------------------------- VIMPAGER ----------------------------------
 
 
-export PAGER=vimpager
+#export PAGER=vimpager
+export PAGER=most
 alias less=$PAGER
 alias zless=$PAGER
+#alias sed='gsed'
 
 ###############################################################################
 ###############################################################################
@@ -19,12 +19,13 @@ alias zless=$PAGER
 ###############
 
 # crontab
-
 alias crontab="VIM_CRONTAB=true crontab"
 
 # ledit
-
 alias ocaml="ledit ocaml"
+
+# SSH
+alias proxy="ssh -nNTC -D 8080"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
@@ -37,6 +38,7 @@ alias svim="sudo vim"
 alias reload="source ~/.zshrc"
 # Raccourcis pour 'ls'
 alias ls="ls --color"
+alias l="ls --color"
 alias ll='ls -hl --color'
 alias la='ls -a --color'
 alias lla='ls -hla --color'
@@ -224,6 +226,7 @@ unsetopt list_beep
 # cd inutile
 setopt auto_cd 
 
+export SVN_EDITOR=vim
 
 
 ##

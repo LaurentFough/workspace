@@ -1,0 +1,23 @@
+#!/bin/bash
+
+base=$0
+path=${base/%\/make_cert/}
+conf=$path/openssl.cnf
+
+#openssl x509 -req -in $3 -out servwiki.crt -CA $1 -CAkey $2 -CAcreateserial -CAserial ca.srl
+#openssl x509 -req -in $3 -CA $2 -CAkey $1 -CAcreateserial -CAserial ca.srl -extfile $conf -extensions "CA_default"
+
+echo -n "AC : "
+read nom
+
+caconf=~/.ca/${nom}.conf
+
+if [ ! -e $caconf ]
+then
+  echo "Aucune autorité n'est pas présente sous le nom $nom"
+  exit 0
+fi
+input=$1
+output=${input/csr/crt}
+
+openssl ca -config $caconf -in $1 -out $output
