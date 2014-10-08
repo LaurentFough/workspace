@@ -16,6 +16,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/omlet.vim'
 
 filetype plugin indent on
 syntax on

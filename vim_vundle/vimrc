@@ -232,8 +232,11 @@ endif
 
 " -------------------------------- MERLIN ---------------------------------------
 
-set rtp+=/Users/hubert/.opam/4.01.0/share/ocamlmerlin/vim
-set rtp+=/Users/hubert/.opam/4.01.0/share/ocamlmerlin/vimbufsync
+"set rtp+=/Users/hubert/.opam/4.01.0/share/ocamlmerlin/vim
+"set rtp+=/Users/hubert/.opam/4.01.0/share/ocamlmerlin/vimbufsync
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+execute "set rtp+=" . g:opamshare . "/merlin/vimbufsync"
 let g:syntastic_omlet_checkers = ['merlin']
 
 " --------------------------------- LATEX --------------------------------------

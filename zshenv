@@ -23,4 +23,7 @@ export PATH=${HOME}/.cabal/bin:${PATH}
 export PATH=${HOME}/.cabal-sandbox/bin:${PATH}
 # export PATH="$HOME/Library/Haskell/bin:$PATH
 
-export PATH=/usr/local/brew/bin:${PATH}
+#export PATH=/usr/local/brew/bin:${PATH}
+#
+## OPAM configuration
+. /Users/hubert/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
