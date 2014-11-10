@@ -76,7 +76,6 @@ map <C-space> <C-n>
 map gt <C-]>
 map ù %x``x
 
-
 set cryptmethod=blowfish
 
 
