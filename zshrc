@@ -121,7 +121,7 @@ export GGG=$'%{\033[40;01;33m%}'
 autoload -U promptinit
 promptinit
 #prompt clint
-prompt adam2
+prompt adam2 5 4 4
 #prompt bart
 
 ################################
