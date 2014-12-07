@@ -1,5 +1,5 @@
 set vb t_vb=
-set guifont=Monaco:h11
+"set guifont=Monaco:h11
 set guioptions-=rL
 
 set guioptions-=T           " Remove the toolbar
