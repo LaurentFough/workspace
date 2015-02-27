@@ -27,3 +27,8 @@ export PATH=${HOME}/.cabal-sandbox/bin:${PATH}
 #
 ## OPAM configuration
 . /Users/hubert/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# GO
+
+export PATH=$HOME/.go/bin:$HOME/src/go/bin:$PATH
+export GOPATH=$HOME/.go:/opt/local

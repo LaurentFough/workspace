@@ -265,3 +265,5 @@ SublerCLI
 byobu
 lame
 lame.1
+ssh/id_rsa
+ssh/id_rsa.pub
