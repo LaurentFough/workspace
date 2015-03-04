@@ -16,7 +16,7 @@ Host scm.gforge.inria.fr
 
 Host xlii
   User root
-  Hostname xlii.info
+  Hostname 37.59.58.101
 
 Host poipoi
   User root
