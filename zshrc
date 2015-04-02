@@ -23,6 +23,7 @@ alias crontab="VIM_CRONTAB=true crontab"
 
 # ledit
 alias ocaml="ledit ocaml"
+alias coq="ledit coqtop"
 
 # SSH
 alias proxy="ssh -nNTC -D 8080"
