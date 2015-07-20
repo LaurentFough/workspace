@@ -4,11 +4,6 @@
 # Tranquil
 export PATH=/usr/local/tranquil/bin:$PATH
 
-# MacPorts Installer
-export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
-
-# Finished adapting your PATH environment variable for use with MacPorts.
-
 # Scripts personnels
 export PATH=${PATH}:${HOME}/.usr/bin
 

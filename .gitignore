@@ -263,3 +263,7 @@ vim_vundle/vim/bundle
 vim_vundle/vim/backup
 SublerCLI
 byobu
+lame
+lame.1
+ssh/id_rsa
+ssh/id_rsa.pub
