@@ -15,7 +15,6 @@ rsync \
   --times \
   --group \
   --owner \
-  --devices \
   --specials \
 	--verbose \
 	--one-file-system \
