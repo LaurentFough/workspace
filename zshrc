@@ -27,9 +27,8 @@ alias coq="ledit coqtop"
 
 # SSH
 alias proxy="ssh -nNTC -D 8080"
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+alias proxyportfwd="ssh -NTC -L 4444:127.0.0.1:4444"
+alias proxyportbwd="ssh -NTC -R 4444:127.0.0.1:4444"
 
 # test
 alias plop="echo 'plop'"
