@@ -16,7 +16,8 @@ Host scm.gforge.inria.fr
 
 Host kimsufi
   User root
-  Hostname 37.59.58.10
+  HostKeyAlgorithms ssh-ed25519
+  Hostname 37.59.58.101
 
 Host poipoi
   User root
