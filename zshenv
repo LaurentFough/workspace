@@ -5,27 +5,26 @@
 #export PATH=/usr/local/tranquil/bin:$PATH
 
 # MacPorts Installer
-export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
+#export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
 
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # Scripts personnels
-export PATH=${PATH}:${HOME}/.usr/bin
+#export PATH=${PATH}:${HOME}/.usr/bin
 
 # iML
 # export PATH=${PATH}:${HOME}/Dropbox/projects/ml-overloading/src
 
 
-export PATH="$PATH":${HOME}/src/depot_tools
+#export PATH="$PATH":${HOME}/src/depot_tools
 
 # cabal
 #export PATH=${HOME}/.cabal/bin:${PATH}
 #export PATH=${HOME}/.cabal-sandbox/bin:${PATH}
 
-#export PATH=/usr/local/brew/bin:${PATH}
-#
 ## OPAM configuration
-. /Users/hubert/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#. /Users/hubert/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#eval `opam config env`
 
 # GO
 #export PATH=$HOME/.go/bin:$HOME/src/go/bin:$PATH
@@ -35,4 +34,4 @@ export PATH="$PATH":${HOME}/src/depot_tools
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 # Python
-source $HOME/.pythonenv/bin/activate
+#source $HOME/.pythonenv/bin/activate

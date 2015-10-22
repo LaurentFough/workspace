@@ -36,6 +36,7 @@ alias plop="echo 'plop'"
 # Perso
 alias svim="sudo vim"
 alias reload="source ~/.zshrc"
+
 # Raccourcis pour 'ls'
 alias ls="ls --color"
 alias l="ls --color"
@@ -52,6 +53,12 @@ alias grep="grep --color"
 # Alias pratiques
 alias c='clear'
 alias s='cd ..'
+
+if [ -f $HOME/.zshrc_plateform ]; then
+  source $HOME/.zshrc_plateform
+else
+  print "404: $HOME/.zshrc_plateform not found."
+fi
 
 ##################
 #  2. Couleurs   #
