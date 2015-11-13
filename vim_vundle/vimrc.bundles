@@ -14,11 +14,14 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'evanmiller/nginx-vim-syntax'
 "Plugin 'c.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'idris-hackers/idris-vim'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/omlet.vim'
 Plugin 'fatih/vim-go'
+"Plugin 'jvoorhis/coq.vim'
+Plugin 'Keithbsmiley/swift.vim'
+Plugin 'rust-lang/rust.vim'
 
 filetype plugin indent on
 syntax on
