@@ -14,7 +14,7 @@ Host vpn
 Host scm.gforge.inria.fr
 	User hgodfroy
 
-Host xlii
+Host kimsufi
   User root
   Hostname 37.59.58.101
 
