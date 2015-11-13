@@ -1,6 +1,6 @@
 [user]
 	name = Hubert
-	email = hubert@poipoi.org
+	email = hubert@godfroy.net
 	signingkey = FEBCBBF7
 [core]
 	excludesfile = /Users/hubert/.gitignore_global
