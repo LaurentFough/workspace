@@ -2,6 +2,12 @@
 #	Hostname 157.159.45.175
 #	ProxyCommand ssh godfroy@ssh1.int-evry.fr "nc %h %p"
 
+
+host rpi
+  User pi
+	#Hostname 192.168.1.4
+	ProxyCommand ssh hubert@poipoi.org "nc 192.168.1.4 %p"
+
 Host evry
 	#Hostname 157.159.45.175
 	Hostname derpy.flutterguy.org
