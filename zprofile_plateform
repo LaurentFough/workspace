@@ -1,0 +1,2 @@
+# MacPorts Installer
+export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH

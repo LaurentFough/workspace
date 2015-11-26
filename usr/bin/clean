@@ -1,3 +1,4 @@
 #!/bin/bash
 
 sudo port -u uninstall
+sudo port clean --all installed

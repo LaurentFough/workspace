@@ -1,11 +1,15 @@
+if [ -f $HOME/.zprofile_plateform ]; then
+  source $HOME/.zprofile_plateform
+else
+  print "404: $HOME/.zprofile_plateform not found."
+fi
+
 # colore sdterr en rouge
 # exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
 
 # Tranquil
 #export PATH=/usr/local/tranquil/bin:$PATH
 
-# MacPorts Installer
-export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
 
 # Finished adapting your PATH environment variable for use with MacPorts.
 
@@ -35,3 +39,9 @@ eval `opam config env`
 
 # Python
 source $HOME/.pythonenv/bin/activate
+
+
+# Local Ruby gem repository
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
