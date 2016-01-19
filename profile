@@ -33,3 +33,4 @@ export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+if [ -e /Users/hubert/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/hubert/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

@@ -45,3 +45,6 @@ source $HOME/.pythonenv/bin/activate
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
+
+if [ -e /Users/hubert/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/hubert/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
