@@ -121,9 +121,9 @@ set wildmenu                    " command-line completion in an enhanced mode
 "-------------------------------------------------------------------------------
 " The current directory is the directory of the file in the current window.
 "-------------------------------------------------------------------------------
-if has("autocmd")
-  autocmd BufEnter * :lchdir %:p:h
-endif
+"if has("autocmd")
+  "autocmd BufEnter * :lchdir %:p:h
+"endif
 
 "-------------------------------------------------------------------------------
 " Fast switching between buffers

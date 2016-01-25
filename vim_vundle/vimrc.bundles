@@ -23,6 +23,7 @@ Plugin 'fatih/vim-go'
 Plugin 'Keithbsmiley/swift.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-scripts/TLA'
+Plugin 'tpope/vim-fugitive'
 
 filetype plugin indent on
 syntax on
