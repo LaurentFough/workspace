@@ -72,6 +72,9 @@ imap <D-D> <esc>:split<cr><C-w>j
 map <D-F> <C-w>f<C-w>J
 imap <D-F> <esc><C-w>f<C-w>J
 map <C-space> <C-n>
+vmap <C-c> "+y
+vmap <C-y> "+y
+nmap <C-p> "+gP
 
 map gt <C-]>
 map ù %x``x
