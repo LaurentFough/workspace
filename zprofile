@@ -5,8 +5,6 @@
 
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-# Scripts personnels
-export PATH=${PATH}:${HOME}/.usr/bin
 
 
 
