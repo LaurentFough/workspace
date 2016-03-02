@@ -23,6 +23,7 @@ alias crontab="VIM_CRONTAB=true crontab"
 
 # ledit
 alias ocaml="ledit ocaml"
+alias coq="ledit coqtop"
 
 # SSH
 alias proxy="ssh -nNTC -D 8080"
@@ -232,3 +233,7 @@ export SVN_EDITOR=vim
 ##
 # EOF
 #
+
+# OPAM configuration
+. /home/hubert/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

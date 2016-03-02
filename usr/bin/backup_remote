@@ -6,10 +6,16 @@ TARGET=$TARGETBASE/current
 BACKUPDIR=../$DAY/
 EXCLUDED=~/.usr/var/backup/rsync/excluded_loria
 
-terminal-notifier -message "Début de la sauvegarde" -title "Backup"
+#terminal-notifier -message "Début de la sauvegarde" -title "Backup"
 
 rsync \
-	--archive \
+  --recursive \
+  --links \
+  --perms \
+  --times \
+  --group \
+  --owner \
+  --specials \
 	--verbose \
 	--one-file-system \
 	--compress \

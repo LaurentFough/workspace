@@ -31,3 +31,5 @@ export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
 . /Users/hubert/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
