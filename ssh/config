@@ -22,7 +22,9 @@ Host scm.gforge.inria.fr
 
 Host kimsufi
   User root
+  HostKeyAlgorithms ssh-ed25519
   Hostname 37.59.58.101
+  Port 2222
 
 Host poipoi
   User root
@@ -34,3 +36,8 @@ Host poipoi
   #Ciphers aes128-ctr
   #MACs hmac-md5
   Hostname ssh.poipoi.org
+
+Host privacy
+  User root
+  Hostname vps195369.ovh.net
+  #Hostname 51.254.37.127
