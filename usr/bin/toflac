@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+import os, sys
+from string import *
+
+ext = ".flac"
+
+nbrfile = len(sys.argv)
+
+for i in range(1, nbrfile):
+    fichier = sys.argv[i]
+    name = rsplit(fichier, ".", 1)[0]
+    cmd = "avconv -i \"" + fichier + "\" \"" + name + ext + "\""
+    print cmd
+    ret = os.system(cmd)
+    if ret != 0:
+        print "Erreur : code " + str(ret)
+        raise
