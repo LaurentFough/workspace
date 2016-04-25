@@ -250,3 +250,7 @@ set nowritebackup
 endif
 
 set whichwrap+=<,>,h,l,[,]
+
+filetype off
+set runtimepath+=/usr/share/lilypond/2.18.2/vim/
+filetype on
