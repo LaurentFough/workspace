@@ -3,6 +3,7 @@ set guifont=Monospace\ 9
 set guioptions-=rL
 
 set guioptions-=T           " Remove the toolbar
+set guioptions-=m           " Remove the menu
 "if !exists("g:spf13_no_big_font")
 "  if LINUX() && has("gui_running")
 "    set guifont=Andale\ Mono\ Regular\ 16,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
